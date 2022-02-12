@@ -77,6 +77,10 @@ $ python src/xxxxx/main.py
 
 ### サンプル機能一覧
 
-| ディレクトリ | 内容  |
-| ------------ | ----- |
-| src/xxxxx    | xxxxx |
+| ディレクトリ           | 内容                                       |
+| ---------------------- | ------------------------------------------ |
+| src/chatwork/sample_01 | ChatworkAPI で自分自身の情報を取得         |
+| src/chatwork/sample_02 | ChatworkAPI でコンタクのユーザー一覧を取得 |
+| src/chatwork/sample_03 | ChatworkAPI でメッセージを追加             |
+| src/sendgrid/sample_01 | SendGrid SDK でテキストメール送信          |
+| src/sendgrid/sample_02 | SendGrid SDK で HTML メール送信            |
