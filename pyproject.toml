@@ -1,11 +1,14 @@
 [tool.poetry]
 name = "python-sample-function"
 version = "0.1.0"
-description = ""
+description = "Pythonサンプル機能集"
 authors = ["nasset-nakamura <nakamura@n-asset.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+requests = "^2.27.1"
+pydantic = "^1.9.0"
+python-dotenv = "^0.19.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
