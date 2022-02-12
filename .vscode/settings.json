@@ -1,0 +1,90 @@
+{
+  // Editor
+  "editor.colorDecorators": false, // ファイル保存時に自動でフォーマット
+  "editor.formatOnType": true, // 入力した行を自動でフォーマット
+  "editor.multiCursorModifier": "ctrlCmd", // マウスでの複数選択時の修飾キーを変更
+  "editor.renderControlCharacters": true, // 制御文字を表示
+  "editor.renderLineHighlight": "all", // 選択行を行番号含めすべてハイライト
+  "editor.renderWhitespace": "all", // 半角スペースを常に表示
+  "editor.snippetSuggestions": "top", // Emmet などのスニペット候補を優先して表示
+  "editor.tabSize": 2, // タブのサイズ変更
+  "editor.wordWrap": "on", // エディターの幅で折り返し
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "on",
+  "diffEditor.renderSideBySide": false, // Git の差分を行内に表示
+  // Terminal
+  "terminal.integrated.fontSize": 18,
+  // VSCode
+  "window.title": "VSCode",
+  "workbench.editor.labelFormat": "short", // タブに表示する文字列の設定
+  "workbench.editor.tabSizing": "shrink", // タブの表示設定
+  "workbench.startupEditor": "none",
+  "explorer.confirmDelete": false, // ファイル削除時の確認を表示しない
+  // File
+  "files.insertFinalNewline": true, // ファイルの保存時に末尾を改行
+  "files.trimFinalNewlines": true, // ファイルの保存時に最終行以降をトリミング
+  "files.trimTrailingWhitespace": true, // ファイルの保存時に行末の空白をトリミング
+  "files.eol": "\n",
+  // Html
+  "html.format.contentUnformatted": "pre, code, textarea, title, h1, h2, h3, h4, h5, h6, p", // タグ内の記述はフォーマットしない
+  "html.format.extraLiners": "", // head, body, /html タグの前に改行を入れない
+  "html.format.unformatted": null, // フレージング・コンテンツ（旧インライン要素のようなタグ）はフォーマットしない
+  "html.format.wrapLineLength": 0, // 行の文字数制限を無くし自動で改行させない
+  // Vetur
+  "vetur.validation.template": false,
+  // JavaScript
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  // TypeScript
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  // Json
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  // Python(interpreter)
+  "python.pythonPath": "${workspaceFolder}/.venv/bin/python",
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  // Python(linter)
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": "${workspaceFolder}/.venv/bin/pflake8",
+  "python.linting.flake8Args": [
+    "--max-line-length 119"
+  ],
+  "python.linting.mypyEnabled": true,
+  "python.linting.mypyPath": "${workspaceFolder}/.venv/bin/mypy",
+  "python.linting.mypyArgs": [
+    "--config-file",
+    "pyproject.toml"
+  ],
+  // Python(formatter)
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "${workspaceFolder}/.venv/bin/black",
+  "python.formatting.blackArgs": [],
+  "python.sortImports.path": "${workspaceFolder}/.venv/bin/isort",
+  // Python(specific)
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true // execute isort
+    },
+    "editor.formatOnSave": true, // format .py file
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  // ESLint
+  "eslint.format.enable": false,
+  "eslint.packageManager": "npm",
+  "npm.packageManager": "npm",
+}

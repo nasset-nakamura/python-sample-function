@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "python-sample-function"
+version = "0.1.0"
+description = ""
+authors = ["nasset-nakamura <nakamura@n-asset.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^22.1.0"
+flake8-bugbear = "^22.1.11"
+isort = "^5.10.1"
+mypy = "^0.931"
+pyproject-flake8 = "^0.0.1-alpha.2"
+taskipy = "^1.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+test = { cmd = "pytest tests", help = "runs all unit tests" }
+fmt = { cmd = "black ./src", help = "format code" }
+lint = { cmd = "task lint_black && task lint_flake8 && task lint_mypy", help = "exec lint" }
+lint_flake8 = "flake8 --max-line-length=119 ./src"
+lint_mypy = "mypy ./src"
+lint_black = "black --check ./src"
+
+[tool.flake8]
+max-line-length = 119
+max-complexity = 20
+select = "C,E,F,W,B"
+ignore = "E203"
+
+[tool.black]
+line-length = 119
+exclude = '''
+(
+    migrations
+    | .mypy_cache
+    | .pytest_cache
+    | .tox
+    | .venv
+    | dist
+)
+'''
+
+[tool.mypy]
+# common
+python_version = 3.9
+show_column_numbers  = true
+show_error_context = true
+ignore_missing_imports = true
+check_untyped_defs = true
+disallow_untyped_defs = true
+# warning
+warn_return_any = true
+warn_unused_configs = true
+warn_redundant_casts = true
+
+[tool.isort]
+profile = "black"
+line_length = 119
